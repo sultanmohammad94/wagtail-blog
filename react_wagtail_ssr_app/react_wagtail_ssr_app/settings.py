@@ -61,6 +61,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
 ROOT_URLCONF = 'react_wagtail_ssr_app.urls'
@@ -132,3 +134,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = str(BASE_DIR / 'static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = str(BASE_DIR / 'media')
+WAGTAIL_SITE_NAME = 'MKS BLOG'
+
